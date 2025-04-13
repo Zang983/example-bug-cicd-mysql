@@ -32,7 +32,7 @@ final class VideoGameFixtures extends Fixture implements DependentFixtureInterfa
         $users = $manager->getRepository(User::class)->findAll();
 
         /** @var array<int, VideoGame> $videoGames */
-        $videoGames = array_fill_callback(0, 500, function (int $index): VideoGame {
+        $videoGames = array_fill_callback(0, 50, function (int $index): VideoGame {
             $videoGame = new VideoGame;
             $description = $this->faker->paragraphs(10, true);
             $test = $this->faker->paragraphs(6, true);
